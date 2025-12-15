@@ -15,13 +15,36 @@
     
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloxd.io - Ultimate Online Block Building Game | Play Free at Bloxd.asia</title>
-    <meta name="description" content="Play Bloxd.io online for free at Bloxd.asia - The ultimate block building and survival game with multiplayer action. Build, explore, and survive in endless worlds!">
-    <meta name="keywords" content="bloxd.io, bloxd, online game, block building, multiplayer game, survival game, free games, browser game">
+    <title>Bloxd.io - Complete Game Guide | 7 Game Modes & Expert Tips | Play Free</title>
+    <meta name="description" content="Master Bloxd.io with our comprehensive guide covering all 7 game modes: BloxdHop parkour, Creative building, Survival, BedWars, DoodleCube, Murder Mystery & SkyWars. Get expert tips, strategies & play free!">
+    <meta name="keywords" content="bloxd.io, bloxd, bloxdhop, parkour game, block building game, multiplayer game, creative mode, survival game, bedwars, skywars, murder mystery, doodle cube, free browser game, minecraft.io alternative">
     <link rel="canonical" href="https://bloxd.asia/">
-    <meta property="og:title" content="Bloxd.io - Ultimate Online Block Building Game">
-    <meta property="og:description" content="Play Bloxd.io online for free - Build, explore, and survive in endless block worlds with multiplayer action!">
+    <meta property="og:title" content="Bloxd.io - Complete Guide for All 7 Game Modes">
+    <meta property="og:description" content="Master every Bloxd.io mode with our expert guide. Parkour challenges, building tips, battle strategies and more. Play free now!">
     <meta property="og:url" content="https://bloxd.asia/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://bloxd.asia/images/bloxd-preview.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bloxd.io - Complete Game Guide | 7 Modes & Tips">
+    <meta name="twitter:description" content="Master all 7 Bloxd.io game modes with our expert guide. Parkour, building, battle strategies & more. Play free!">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Bloxd.asia">
+    <meta name="language" content="English">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "Bloxd.io",
+        "description": "Multiplayer block-based game with 7 unique modes including parkour, building, survival, and battle modes",
+        "url": "https://bloxd.asia/",
+        "genre": ["Action", "Adventure", "Puzzle", "Strategy"],
+        "gameMode": ["SinglePlayer", "MultiPlayer"],
+        "operatingSystem": "Web Browser",
+        "applicationCategory": "Game"
+    }
+    </script>
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="robots" content="index, follow">
@@ -243,6 +266,13 @@
             margin: 0 auto;
             font-weight: 400;
         }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: var(--label-tertiary);
+            margin-top: 1rem;
+            opacity: 0.9;
+        }
         
         .game-container {
             margin: 3rem 0;
@@ -413,8 +443,256 @@
         footer p {
             color: var(--label-tertiary);
             font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+
+        .footer-links {
+            margin: 1rem 0;
+        }
+
+        .footer-links a {
+            color: var(--label-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--apple-blue);
+        }
+
+        .footer-subtitle {
+            opacity: 0.7;
+            font-size: 0.8rem;
         }
         
+        /* Game Modes Grid Styles */
+        .game-modes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .mode-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mode-card.featured {
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.1), rgba(175, 82, 222, 0.1));
+            border: 1px solid rgba(0, 122, 255, 0.3);
+        }
+
+        .mode-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .mode-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .mode-tag {
+            color: var(--apple-blue);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .mode-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--label-primary);
+        }
+
+        .mode-features {
+            list-style: none;
+            padding: 1rem 0;
+            margin: 1rem 0;
+        }
+
+        .mode-features li {
+            padding: 0.3rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+            color: var(--label-secondary);
+        }
+
+        .mode-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--apple-green);
+        }
+
+        .mode-link {
+            color: var(--apple-blue);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .mode-link:hover {
+            transform: translateX(5px);
+        }
+
+        /* Guide Section Styles */
+        .guide-container {
+            display: grid;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .guide-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .controls-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .control-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .key {
+            background: var(--tertiary-background);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-family: monospace;
+            font-weight: bold;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .control-desc {
+            color: var(--label-secondary);
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .tip-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tip-card h4 {
+            color: var(--apple-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .strategy-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .strategy-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--label-secondary);
+        }
+
+        .strategy-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Expert Tips Section */
+        .tips-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .tip-category {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tip-category h3 {
+            margin-bottom: 1rem;
+            color: var(--label-primary);
+        }
+
+        .tips-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tips-list li {
+            padding: 0.8rem 0;
+            color: var(--label-secondary);
+            line-height: 1.6;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .faq-category {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-category h3 {
+            margin-bottom: 1.5rem;
+            color: var(--label-primary);
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item h4 {
+            color: var(--apple-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .faq-item p {
+            color: var(--label-secondary);
+            line-height: 1.6;
+        }
+
         /* Mobile styles */
         @media (max-width: 768px) {
             .nav-links {
@@ -469,6 +747,29 @@
                 grid-template-columns: 1fr;
                 gap: 1rem;
             }
+
+            .game-modes-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .controls-list {
+                grid-template-columns: 1fr;
+            }
+
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tips-categories {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .faq-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -498,9 +799,10 @@
             <a href="#" class="logo">Bloxd.asia</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#game">Play Game</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#how-to-play">How to Play</a></li>
+                <li><a href="#game-modes">Game Modes</a></li>
+                <li><a href="#featured-mode">Guide</a></li>
+                <li><a href="#expert-tips">Tips</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         </nav>
@@ -508,9 +810,10 @@
     
     <main>
         <section class="hero">
-            <h1>Bloxd.io - Ultimate Block Building Adventure</h1>
-            <p>Dive into the ultimate block-building experience with multiplayer action, endless creativity, and survival challenges!</p>
-            <a href="#game" class="play-button">🎮 Start Playing Now</a>
+            <h1>Bloxd.io - Complete Game Guide</h1>
+            <p>Master all 7 unique game modes • Expert tips & strategies • Parkour challenges, building creativity & epic battles</p>
+            <a href="#game" class="play-button">🚀 Play Free Now</a>
+            <p class="hero-subtitle">No download required • Play instantly in your browser</p>
         </section>
         
         <section class="game-container" id="game">
@@ -530,86 +833,268 @@
 
 <script async="async" data-cfasync="false" src="//pl27676511.revenuecpmgate.com/590ff19f7cfb6052e04d08a6f678701a/invoke.js"></script>
 <div id="container-590ff19f7cfb6052e04d08a6f678701a"></div>
-        
-        <section class="content-section" id="about">
-            <h2>🎯 About Bloxd.io</h2>
-            <p>Bloxd.io is an immersive online multiplayer block-building game that combines creativity, survival, and competitive gameplay. Set in procedurally generated worlds, players can build incredible structures, survive against environmental challenges, and compete with others in real-time.</p>
-            <p>Whether you're a creative builder, survival enthusiast, or competitive gamer, Bloxd.io offers endless possibilities. Join millions of players worldwide in this pixelated universe where your imagination is the only limit.</p>
-        </section>
-        
-        <section class="content-section" id="features">
-            <h2>✨ Game Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🏗️</div>
-                    <h3>Creative Building Mode</h3>
-                    <p>Unleash your creativity with unlimited resources and build magnificent structures, from simple houses to complex cities.</p>
+
+        <section class="content-section" id="game-modes">
+            <h2>🎮 Choose Your Adventure - 7 Unique Game Modes</h2>
+            <p>Select from diverse game modes, each offering unique challenges and experiences. Master them all to become a true Bloxd.io champion!</p>
+
+            <div class="game-modes-grid">
+                <div class="mode-card featured">
+                    <div class="mode-icon">🏃</div>
+                    <h3>BloxdHop</h3>
+                    <p class="mode-tag">Parkour Challenge</p>
+                    <p>Master precise jumps and navigate challenging obstacle courses. Test your reflexes and agility!</p>
+                    <ul class="mode-features">
+                        <li>100+ challenging levels</li>
+                        <li>Speed run competitions</li>
+                        <li>Advanced jumping techniques</li>
+                    </ul>
+                    <a href="#featured-mode" class="mode-link">View Guide →</a>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚔️</div>
-                    <h3>Survival Challenges</h3>
-                    <p>Test your survival skills against environmental hazards, resource scarcity, and challenging weather conditions.</p>
+
+                <div class="mode-card">
+                    <div class="mode-icon">🏗️</div>
+                    <h3>Creative Mode</h3>
+                    <p class="mode-tag">Building Paradise</p>
+                    <p>Unlimited resources, endless possibilities. Build anything you can imagine!</p>
+                    <ul class="mode-features">
+                        <li>Infinite blocks & items</li>
+                        <li>Save & share creations</li>
+                        <li>No combat restrictions</li>
+                    </ul>
+                    <a href="#featured-mode" class="mode-link">Learn More →</a>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3>Multiplayer Action</h3>
-                    <p>Join friends or compete against players worldwide in various game modes and collaborative building projects.</p>
+
+                <div class="mode-card">
+                    <div class="mode-icon">⚔️</div>
+                    <h3>Survival Mode</h3>
+                    <p class="mode-tag">Adventure Awaits</p>
+                    <p>Gather resources, craft tools, build shelters, and survive against all odds.</p>
+                    <ul class="mode-features">
+                        <li>Resource gathering</li>
+                        <li>Crafting system</li>
+                        <li>Base building</li>
+                    </ul>
+                    <a href="#featured-mode" class="mode-link">Survival Tips →</a>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <h3>Infinite Worlds</h3>
-                    <p>Explore procedurally generated worlds with unique biomes, hidden treasures, and endless exploration opportunities.</p>
+
+                <div class="mode-card">
+                    <div class="mode-icon">🛡️</div>
+                    <h3>Wars/BedWars</h3>
+                    <p class="mode-tag">Team Battle</p>
+                    <p>Protect your bed, destroy enemy beds, and be the last team standing!</p>
+                    <ul class="mode-features">
+                        <li>Team-based combat</li>
+                        <li>Strategic gameplay</li>
+                        <li>Economic management</li>
+                    </ul>
+                    <a href="#featured-mode" class="mode-link">Battle Strategy →</a>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Customization Options</h3>
-                    <p>Personalize your character, tools, and building materials to create a unique gaming experience.</p>
+
+                <div class="mode-card">
+                    <div class="mode-icon">🎨</div>
+                    <h3>DoodleCube</h3>
+                    <p class="mode-tag">Creative Fun</p>
+                    <p>Build objects for others to guess in this creative drawing challenge!</p>
+                    <ul class="mode-features">
+                        <li>Creative building</li>
+                        <li>Guessing gameplay</li>
+                        <li>Family-friendly fun</li>
+                    </ul>
+                    <a href="#featured-mode" class="mode-link">How to Play →</a>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
-                    <h3>Competitive Modes</h3>
-                    <p>Participate in tournaments, building contests, and leaderboard competitions to prove your skills.</p>
+
+                <div class="mode-card">
+                    <div class="mode-icon">🔍</div>
+                    <h3>Murder Mystery</h3>
+                    <p class="mode-tag">Detective Game</p>
+                    <p>Find the murderer, protect innocents, or eliminate everyone without getting caught!</p>
+                    <ul class="mode-features">
+                        <li>Role-based gameplay</li>
+                        <li>Suspense & strategy</li>
+                        <li>Social deduction</li>
+                    </ul>
+                    <a href="#featured-mode" class="mode-link">Detective Tips →</a>
+                </div>
+
+                <div class="mode-card">
+                    <div class="mode-icon">🏝️</div>
+                    <h3>SkyWars</h3>
+                    <p class="mode-tag">Island Battle</p>
+                    <p>Start on a floating island, gather resources, and eliminate all opponents!</p>
+                    <ul class="mode-features">
+                        <li>Fast-paced action</li>
+                        <li>Resource management</li>
+                        <li>PvP combat</li>
+                    </ul>
+                    <a href="#featured-mode" class="mode-link">Win Strategy →</a>
                 </div>
             </div>
         </section>
-        
-        <section class="content-section" id="how-to-play">
-            <h2>🎮 How to Play Bloxd.io</h2>
-            <p><strong>Getting Started:</strong> Simply click the play button above to launch the game directly in your browser. No downloads or installations required!</p>
-            
-            <p><strong>Basic Controls:</strong></p>
-            <p>• Use WASD keys to move your character around the world</p>
-            <p>• Left-click to break blocks and right-click to place them</p>
-            <p>• Use the mouse to look around and navigate your view</p>
-            <p>• Press E to open your inventory and manage resources</p>
-            <p>• Use the number keys (1-9) to quickly select tools and blocks</p>
-            
-            <p><strong>Game Modes:</strong></p>
-            <p>Choose from various game modes including Creative Mode for unlimited building, Survival Mode for resource management challenges, and Multiplayer Mode for collaborative or competitive play with other players.</p>
-            
-            <p><strong>Pro Tips:</strong></p>
-            <p>• Start by gathering basic resources like wood and stone</p>
-            <p>• Build a shelter before nightfall in Survival Mode</p>
-            <p>• Experiment with different block combinations for unique designs</p>
-            <p>• Join multiplayer servers to learn from experienced players</p>
+
+        <section class="content-section" id="featured-mode">
+            <h2>🏃 Master BloxdHop - Ultimate Parkour Guide</h2>
+            <p>BloxdHop is the featured mode on our site - test your parkour skills with these expert techniques!</p>
+
+            <div class="guide-container">
+                <div class="guide-section">
+                    <h3>🎮 Basic Controls</h3>
+                    <div class="controls-list">
+                        <div class="control-item">
+                            <span class="key">W/A/S/D</span>
+                            <span class="control-desc">Move your character</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="key">SPACE</span>
+                            <span class="control-desc">Jump</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="key">SHIFT</span>
+                            <span class="control-desc">Sprint (for longer jumps)</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="key">Mouse</span>
+                            <span class="control-desc">Control camera/view</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-section">
+                    <h3>💡 Pro Jumping Techniques</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <h4>Diagonal Jumping</h4>
+                            <p>Use diagonal routes to maximize jump distance. Perfect for crossing wider gaps!</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4>Sprint Jumping</h4>
+                            <p>Always sprint before jumping. Essential for gaps of 2+ blocks distance.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4>Edge Jumping</h4>
+                            <p>Jump from the very edge of blocks for maximum distance. Timing is crucial!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-section">
+                    <h3>🚀 Advanced Strategies</h3>
+                    <ul class="strategy-list">
+                        <li><strong>Practice makes perfect:</strong> Start with easier maps to build confidence</li>
+                        <li><strong>Learn map layouts:</strong> Memorize obstacle patterns through repetition</li>
+                        <li><strong>Master timing:</strong> Each jump type requires precise timing</li>
+                        <li><strong>Use checkpoints:</strong> Save progress on longer courses</li>
+                        <li><strong>Watch pros:</strong> Learn advanced techniques from experienced players</li>
+                    </ul>
+                </div>
+            </div>
         </section>
-        
-        <section class="content-section">
-            <h2>🌟 Why Choose Bloxd.asia?</h2>
-            <p>Bloxd.asia provides the ultimate Bloxd.io gaming experience with optimized performance, reliable servers, and a community-focused approach. Our platform ensures:</p>
-            
-            <p>• <strong>Fast Loading Times:</strong> Optimized game delivery for instant play</p>
-            <p>• <strong>Cross-Platform Compatibility:</strong> Play seamlessly on desktop, mobile, and tablet devices</p>
-            <p>• <strong>Regular Updates:</strong> Stay current with the latest Bloxd.io features and improvements</p>
-            <p>• <strong>Community Support:</strong> Join our active community of builders and survivors</p>
-            <p>• <strong>Safe Gaming Environment:</strong> Secure, monitored servers for worry-free gameplay</p>
-            
-            <p>Experience the difference that quality hosting and community dedication can make. Start your Bloxd.io adventure today and discover why thousands of players choose Bloxd.asia as their preferred gaming destination.</p>
+
+        <section class="content-section" id="expert-tips">
+            <h2>💡 Expert Tips for All Game Modes</h2>
+            <p>Elevate your gameplay with these advanced strategies from experienced players!</p>
+
+            <div class="tips-categories">
+                <div class="tip-category">
+                    <h3>⚔️ Combat Excellence</h3>
+                    <ul class="tips-list">
+                        <li><strong>Speed Bridging:</strong> Practice placing blocks while sprinting for rapid bridge building in BedWars</li>
+                        <li><strong>Economic Priority:</strong> Start with iron armor & stone sword, upgrade to diamond mid-game</li>
+                        <li><strong>Layered Defense:</strong> Use "onion-style" defense with obsidian core, wool/clay outer layers</li>
+                    </ul>
+                </div>
+
+                <div class="tip-category">
+                    <h3>🏗️ Building Mastery</h3>
+                    <ul class="tips-list">
+                        <li><strong>Safe Mining:</strong> Never dig straight down! Use staircase or zigzag patterns</li>
+                        <li><strong>Farm Optimization:</strong> Prioritize sustainable food sources like wheat or carrot farms</li>
+                        <li><strong>Strategic Location:</strong> Choose base spots near multiple resources with natural defenses</li>
+                    </ul>
+                </div>
+
+                <div class="tip-category">
+                    <h3>🎯 Game-Specific Tips</h3>
+                    <ul class="tips-list">
+                        <li><strong>Murder Mystery:</strong> As murderer, act innocent, strike when witnesses are absent</li>
+                        <li><strong>SkyWars:</strong> Rush center island for better gear, use knockback on bridges</li>
+                        <li><strong>DoodleCube:</strong> Focus on recognizable shapes, use minimal blocks for clarity</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="faq">
+            <h2>❓ Frequently Asked Questions</h2>
+            <p>Find answers to common questions about Bloxd.io gameplay and technical issues.</p>
+
+            <div class="faq-container">
+                <div class="faq-category">
+                    <h3>🎮 Gameplay & Tips</h3>
+                    <div class="faq-item">
+                        <h4>Q: Why can't I make jumps in parkour mode?</h4>
+                        <p>A: Ensure you're sprinting (hold Shift) and jumping from the very edge of blocks. Timing is crucial!</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q: How do I bridge quickly in BedWars?</h4>
+                        <p>A: Practice speed bridging - place blocks while moving forward and slightly backward to maintain balance.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q: Game is laggy with high delay, what should I do?</h4>
+                        <p>A: Try switching server regions in settings or lower your graphics quality for better performance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3>🔧 Technical & Account</h3>
+                    <div class="faq-item">
+                        <h4>Q: How do I save my Creative mode builds?</h4>
+                        <p>A: Make sure you're logged into your account - saves are tied to your player ID automatically.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q: Can I change my username?</h4>
+                        <p>A: Yes, username changes are available in account settings, though there may be cooldown periods.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q: Game crashes or won't load, help!</h4>
+                        <p>A: Clear your browser cache and cookies, or try switching to a different browser.</p>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3>👥 Community & Rules</h3>
+                    <div class="faq-item">
+                        <h4>Q: Can I create a private server?</h4>
+                        <p>A: Some modes support private rooms for friends. Larger private servers may require premium features.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q: Found a hacker, what should I do?</h4>
+                        <p>A: Use the in-game report feature and provide evidence to game administrators.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q: Why was I banned?</h4>
+                        <p>A: Bans typically result from rule violations. Contact support for specific details about your case.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="about">
+            <h2>🎯 About Bloxd.io</h2>
+            <p>Bloxd.io is a multiplayer block-based gaming platform featuring 7 unique game modes. From challenging parkour courses to creative building adventures, intense battles, and mystery solving games - there's something for every type of player!</p>
+            <p>Join millions of players worldwide in this voxel-based universe where creativity meets competition. No downloads required - play instantly in your browser!</p>
         </section>
     </main>
     
     <footer>
-        <p>&copy; 2024 Bloxd.asia - Your Premier Destination for Bloxd.io Gaming | Play Responsibly</p>
+        <p>&copy; 2024 Bloxd.asia - Master Bloxd.io with Complete Game Guides</p>
+        <p class="footer-links">
+            <a href="#game-modes">Game Modes</a> •
+            <a href="#featured-mode">Guides</a> •
+            <a href="#expert-tips">Tips</a> •
+            <a href="#faq">FAQ</a>
+        </p>
+        <p class="footer-subtitle">Your ultimate resource for Bloxd.io mastery</p>
     </footer>
     
     <script>
@@ -705,7 +1190,6 @@
     </script>
 </body>
 </html>
-
 
 
 
